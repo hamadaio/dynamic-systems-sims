@@ -342,21 +342,21 @@ class BrainStateSpaceAnimator:
         return self.anim
 
 
-# Create and run the animation
+# --- render and run animation
 if __name__ == "__main__":
     print("Initializing Brain State-Space Animation...")
     print("Simulating fNIRS data with transition from rest to focused attention...")
 
-    # Create the animator
+    # --- animator
     animator = BrainStateSpaceAnimator(duration=30, sampling_rate=10)
 
     print("Starting animation...")
     print("- blue dots: resting state")
     print("- orange dots: focused attention state")
-    print("- red dots: Current brain state")
+    print("- red dots: curr brain state")
     print("- cogntiive state transition occurs at t=10s")
 
-    # Run the animation
-    # Uncomment the next line to save as GIF
+    # --- run animation
+    # --- uncomment the next line to save as gif
     anim = animator.run_animation(interval=100, save_as='brain_statespace.gif')
     #anim = animator.run_animation(interval=100)
